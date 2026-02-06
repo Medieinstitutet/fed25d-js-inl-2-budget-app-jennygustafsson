@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Budget app</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="logo">Budget app</h1>
+    </header>
+
+    <main class="container">
+      <div class="forms-section">
+        
+        <section class="form-card expense-form">
+          <h2>Lägg till utgift</h2>
+          <form id="expenseForm">
+            <div class="form-group">
+              <label for="expenseAmount">Belopp (kr)</label>
+              <input 
+                type="number" 
+                id="expenseAmount" 
+                name="amount" 
+                step="0.01" 
+                min="0" 
+                required 
+                placeholder="0.00"
+              />
+            </div>
+            <div class="form-group">
+              <label for="expenseDescription">Beskrivning</label>
+              <input 
+                type="text" 
+                id="expenseDescription" 
+                name="description" 
+                required 
+                placeholder="T.ex. Mat, Transport, etc."
+              />
+            </div>
+            <button type="submit" class="btn btn-expense">Lägg till utgift</button>
+          </form>
+        </section>
+
+        <!-- Formulär för inkomst -->
+        <section class="form-card income-form">
+          <h2>Lägg till inkomst</h2>
+          <form id="incomeForm">
+            <div class="form-group">
+              <label for="incomeAmount">Belopp (kr)</label>
+              <input 
+                type="number" 
+                id="incomeAmount" 
+                name="amount" 
+                step="0.01" 
+                min="0" 
+                required 
+                placeholder="0.00"
+              />
+            </div>
+            <div class="form-group">
+              <label for="incomeDescription">Beskrivning</label>
+              <input 
+                type="text" 
+                id="incomeDescription" 
+                name="description" 
+                required 
+                placeholder="T.ex. Lön, Bidrag, etc."
+              />
+            </div>
+            <button type="submit" class="btn btn-income">Lägg till inkomst</button>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
