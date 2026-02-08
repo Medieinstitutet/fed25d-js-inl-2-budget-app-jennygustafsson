@@ -6,7 +6,7 @@
 
 body {
   font-family: system-ui, Arial, sans-serif;
-  background: #ecd5d5;
+  background: #fffdfd;
   min-height: 100vh;
   padding: 20px;
   color: #333;
@@ -28,6 +28,37 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+// Balans-sektion
+.balance-section {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  margin-top: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  
+  h2 {
+    margin-bottom: 16px;
+    font-size: 1.3rem;
+    color: #333;
+    font-weight: 600;
+  }
+}
+
+.balance-amount {
+  font-size: 2.5rem;
+  font-weight: 700;
+  transition: color 0.3s ease;
+  
+  &.positive {
+    color: #27ae60;
+  }
+  
+  &.negative {
+    color: #ff6b6b;
+  }
 }
 
 .forms-section {
@@ -56,10 +87,10 @@ body {
   }
   
   &.expense-form {
-    border-top: 4px solid #151414;
+    border-top: 4px solid #f69696;
     
     h2 {
-      color: #ff6b6b;
+      color: #090909;
     }
   }
   
@@ -67,7 +98,7 @@ body {
     border-top: 4px solid #b6f3cf;
     
     h2 {
-      color: #b6f3cf;
+      color: #080808;
     }
   }
 }
@@ -117,7 +148,7 @@ body {
   
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px rgba(7, 7, 7, 0.2);
   }
   
   &:active {
@@ -141,9 +172,35 @@ body {
       background: linear-gradient(135deg, #d6f0d6 0%, #d6f1d6 100%);
     }
   }
+  
+  &.btn-delete-expense {
+    background: #fbfafa;
+    color: rgb(11, 11, 11);
+    margin-top: 12px;
+    
+    &:hover {
+      background: #c82333;
+    }
+  }
+  
+  &.btn-delete-income {
+    background: #fcfbfb;
+    color: rgb(3, 3, 3);
+    margin-top: 12px;
+    
+    &:hover {
+      background: #c82333;
+    }
+  }
 }
 
-// Responsive design
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+
 @media (max-width: 768px) {
   .forms-section {
     grid-template-columns: 1fr;
