@@ -1,6 +1,7 @@
 {
-  "name": "budget-app",
-  "version": "1.0.0",
+  "name": "vite",
+  "private": true,
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -8,7 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^5.0.0",
-    "sass": "^1.69.0"
+    "sass": "^1.97.2",
+    "vite": "^7.2.4"
   }
 }
