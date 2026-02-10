@@ -38,6 +38,12 @@
                 placeholder="T.ex. Lön, Bidrag, etc."
               />
             </div>
+            <div class="form-group">
+              <label for="incomeCategory">Kategori</label>
+              <select id="incomeCategory" name="category" required>
+                <option value="">Välj kategori</option>
+              </select>
+            </div>
             <div class="form-actions">
               <button type="submit" class="btn btn-income">Lägg till inkomst</button>
               <button type="button" id="deleteLastIncome" class="btn btn-delete-income">Radera senaste inkomst</button>
@@ -69,6 +75,12 @@
                 required 
                 placeholder="T.ex. Mat, Transport, etc."
               />
+            </div>
+            <div class="form-group">
+              <label for="expenseCategory">Kategori</label>
+              <select id="expenseCategory" name="category" required>
+                <option value="">Välj kategori</option>
+              </select>
             </div>
             <div class="form-actions">
               <button type="submit" class="btn btn-expense">Lägg till utgift</button>
