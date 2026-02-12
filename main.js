@@ -224,3 +224,17 @@ if (document.readyState === 'loading') {
 } else {
   init();
 }
+
+// Exportera funktioner och variabler för TypeScript (ovanpå JavaScript-koden)
+export { 
+  budgetItems, 
+  loadFromStorage, 
+  calculateBalance, 
+  addTransaction,
+  saveToStorage,
+  updateBalance,
+  populateCategorySelects,
+  deleteLastExpense,
+  deleteLastIncome,
+  setFeedback
+};
