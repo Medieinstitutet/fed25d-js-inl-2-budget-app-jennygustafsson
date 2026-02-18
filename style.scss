@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, Arial, sans-serif;
+  background: #fffdfd;
+  min-height: 100vh;
+  padding: 20px;
+  color: #333;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 20px;
+  
+  .logo {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// Balans-sektion
+.balance-section {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  margin-top: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  
+  h2 {
+    margin-bottom: 16px;
+    font-size: 1.3rem;
+    color: #333;
+    font-weight: 600;
+  }
+}
+
+.balance-amount {
+  font-size: 2.5rem;
+  font-weight: 700;
+  transition: color 0.3s ease;
+  
+  &.positive {
+    color: #27ae60;
+  }
+  
+  &.negative {
+    color: #ff6b6b;
+  }
+}
+
+.forms-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.form-card {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  }
+  
+  h2 {
+    margin-bottom: 24px;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  &.expense-form {
+    border-top: 4px solid #f69696;
+    
+    h2 {
+      color: #090909;
+    }
+  }
+  
+  &.income-form {
+    border-top: 4px solid #b6f3cf;
+    
+    h2 {
+      color: #080808;
+    }
+  }
+}
+
+.form-group {
+  margin-bottom: 20px;
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+    font-size: 0.9rem;
+  }
+  
+  input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    
+    &:focus {
+      outline: none;
+      border-color: #667eea;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+    
+    &::placeholder {
+      color: #aaa;
+    }
+  }
+  
+  select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
+    cursor: pointer;
+    
+    &:focus {
+      outline: none;
+      border-color: #667eea;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+  }
+}
+
+.btn {
+  width: 100%;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(7, 7, 7, 0.2);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+  
+  &.btn-expense {
+    background: linear-gradient(135deg, #e87575 0%, #e17a7a 100%);
+    color: white;
+    
+    &:hover {
+      background: linear-gradient(135deg, #e49393 0%, #dc8585 100%);
+    }
+  }
+  
+  &.btn-income {
+    background: linear-gradient(135deg, #d0fad0 0%, #d0fad0 100%);
+    color: white;
+    
+    &:hover {
+      background: linear-gradient(135deg, #d6f0d6 0%, #d6f1d6 100%);
+    }
+  }
+  
+  &.btn-delete-expense {
+    background: #fbfafa;
+    color: rgb(11, 11, 11);
+    margin-top: 12px;
+    
+    &:hover {
+      background: #c82333;
+    }
+  }
+  
+  &.btn-delete-income {
+    background: #fcfbfb;
+    color: rgb(3, 3, 3);
+    margin-top: 12px;
+    
+    &:hover {
+      background: #c82333;
+    }
+  }
+}
+
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+
+@media (max-width: 768px) {
+  .forms-section {
+    grid-template-columns: 1fr;
+  }
+  
+  .header .logo {
+    font-size: 2rem;
+  }
+}

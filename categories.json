@@ -1,0 +1,18 @@
+{
+  "expense": [
+    "Mat",
+    "Transport",
+    "Boende",
+    "Nöje",
+    "Kläder",
+    "Hälsa",
+    "Övrigt"
+  ],
+  "income": [
+    "Lön",
+    "Bidrag",
+    "Investeringar",
+    "Arvode",
+    "Övrigt"
+  ]
+}
